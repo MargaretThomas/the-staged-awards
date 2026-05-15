@@ -9,9 +9,40 @@ Because every repo deserves at least one dramatic standing ovation.
 
 ---
 
+## Install for Codex
+
+The most reliable local install path is to install this as a Codex skill.
+
+Clone this repository somewhere on your machine:
+
+```bash
+git clone <repo-url> ~/codex-skills/the-staged-awards
+```
+
+Copy the skill folder into your Codex skills directory:
+
+```bash
+mkdir -p ~/.codex/skills
+cp -R ~/codex-skills/the-staged-awards/skills/the-staged-awards ~/.codex/skills/the-staged-awards
+```
+
+Restart Codex, then invoke the skill from any repository:
+
+```text
+Use $the-staged-awards to generate a mini awards ceremony for this repository.
+```
+
+The skill should be installed at:
+
+```text
+~/.codex/skills/the-staged-awards/SKILL.md
+```
+
+---
+
 ## Codex Plugin Structure
 
-This repository is packaged as a Codex plugin with one bundled skill:
+This repository also includes a Codex plugin wrapper with one bundled skill:
 
 ```text
 .codex-plugin/plugin.json
@@ -20,7 +51,7 @@ skills/the-staged-awards/references/ceremony-patterns.md
 skills/the-staged-awards/templates/awards_template.md
 ```
 
-The plugin manifest points Codex at `./skills/`, and the skill can be run against any repository Codex can inspect.
+The plugin manifest points Codex at `./skills/`. Local plugin discovery support can vary by Codex environment, so the skill install steps above are the recommended path for local/team use today.
 
 ---
 
