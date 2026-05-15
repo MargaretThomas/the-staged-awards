@@ -1,0 +1,20 @@
+{
+  "name": "the-staged-awards",
+  "version": "0.1.0",
+  "description": "Generate playful mini awards ceremonies for software repositories.",
+  "license": "MIT",
+  "keywords": ["repository", "git", "awards", "developer-culture"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "The Staged Awards",
+    "shortDescription": "Playful repo awards ceremonies",
+    "longDescription": "Generate affectionate, developer-aware awards ceremonies from a repository's git history, file structure, tests, docs, and naming patterns.",
+    "developerName": "The Staged Awards",
+    "category": "Productivity",
+    "capabilities": ["Read"],
+    "defaultPrompt": [
+      "Use The Staged Awards to generate a playful awards ceremony for this repository.",
+      "Create a mini awards ceremony from this repo's git history, files, docs, and tests."
+    ]
+  }
+}
