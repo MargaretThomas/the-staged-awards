@@ -1,0 +1,5 @@
+interface:
+  display_name: "The Staged Awards"
+  short_description: "Playful repo awards ceremonies"
+  brand_color: "#E0A100"
+  default_prompt: "Use $the-staged-awards to generate a playful mini awards ceremony for this repository."
