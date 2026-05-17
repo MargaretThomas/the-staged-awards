@@ -1,4 +1,4 @@
-# The Staged Awards
+# The Staged Awards: {{repository_name}} 
 
 _A tiny awards ceremony for this repository._
 
