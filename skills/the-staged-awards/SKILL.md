@@ -1,11 +1,11 @@
 ---
 name: the-staged-awards
-description: Generate a playful, affectionate mini awards ceremony for a software repository by analyzing git history, commit messages, file structure, tests, docs, naming patterns, and development quirks.
+description: Generate a playful, affectionate short-form awards ceremony for a software repository by analyzing git history, commit messages, file structure, tests, docs, naming patterns, and development quirks.
 ---
 
 # The Staged Awards
 
-Generate a playful, affectionate mini awards ceremony for the current software repository, or for a repository path named by the user. The ceremony should feel like a warm developer awards night, not a roast.
+Generate a playful, affectionate short-form awards ceremony for the current software repository, or for a repository path named by the user. The ceremony should feel like a warm developer awards night, not a roast.
 
 ## Workflow
 
@@ -34,7 +34,7 @@ Each award should include:
 
 - Award title
 - Winner, such as a file, directory, commit message, script, test, docs page, config file, or recurring pattern
-- Short explanation grounded in the repository
+- Brief explanation grounded in the repository
 - One brief presenter-style sentence as normal prose, without a label such as `Presenter commentary:`
 
 ## Tone Rules

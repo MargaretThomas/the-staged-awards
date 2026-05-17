@@ -1,6 +1,6 @@
 # The Staged Awards: {{repository_name}} 
 
-_A tiny awards ceremony for this repository._
+_A lightweight awards ceremony for this repository._
 
 Generated on: {{generated_date}}  
 Repository: `{{repository_name}}`  

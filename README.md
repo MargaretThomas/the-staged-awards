@@ -1,9 +1,9 @@
 # The Staged Awards
 
-Tiny awards ceremonies for software repositories.
+Lightweight awards ceremonies for software repositories.
 Part morale boost, part code archaeology, part developer theatre.
 
-The Staged Awards analyzes a repository’s structure, commit history, naming patterns, documentation, and development quirks to generate a playful mini awards ceremony in Markdown.
+The Staged Awards analyzes a repository’s structure, commit history, naming patterns, documentation, and development quirks to generate a playful short-form awards ceremony in Markdown.
 
 Because every repo deserves at least one dramatic standing ovation.
 
@@ -29,7 +29,7 @@ cp -R ~/codex-skills/the-staged-awards/skills/the-staged-awards ~/.codex/skills/
 Restart Codex, then invoke the skill from any repository:
 
 ```text
-Use $the-staged-awards to generate a mini awards ceremony for this repository.
+Use $the-staged-awards to generate an awards ceremony for this repository.
 ```
 
 The skill should be installed at:
@@ -76,7 +76,7 @@ The goal is to celebrate the strange humanity inside software projects.
 ```md
 # The Staged Awards: example-repo
 
-_A tiny awards ceremony for this repository._
+_A lightweight awards ceremony for this repository._
 
 Generated on: 2026-05-17  
 Repository: `example-repo`  
