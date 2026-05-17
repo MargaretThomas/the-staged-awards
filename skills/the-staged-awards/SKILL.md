@@ -5,7 +5,7 @@ description: Generate a playful, affectionate mini awards ceremony for a softwar
 
 # The Staged Awards
 
-Generate a playful but respectful mini awards ceremony for the current software repository, or for a repository path named by the user.
+Generate a playful, affectionate mini awards ceremony for the current software repository, or for a repository path named by the user. The ceremony should feel like a warm developer awards night, not a roast.
 
 ## Workflow
 
@@ -13,7 +13,7 @@ Generate a playful but respectful mini awards ceremony for the current software 
    - Identify the repository name and current branch.
    - Review recent git history and commit messages.
    - Review tracked files, top-level directories, docs, tests, scripts, helpers, and config files.
-   - Look for repeated changes, high-churn areas, quiet stable files, unusually named helpers, lonely tests, ambitious refactors, and recurring fix patterns.
+   - Look for repeated changes, high-churn areas, quiet stable files, unusually named helpers, careful tests, ambitious refactors, recurring fix patterns, documentation growth, and workflow support.
 2. Prefer lightweight shell inspection commands such as:
    - `git rev-parse --show-toplevel`
    - `git branch --show-current`
@@ -22,8 +22,13 @@ Generate a playful but respectful mini awards ceremony for the current software 
    - `git ls-files`
    - `git status --short`
 3. Do not expose raw analysis notes unless the user asks. Use the inspection only to make the awards specific and grounded.
-4. Generate 5-10 awards in Markdown.
-5. Keep the tone affectionate, witty, developer-aware, lightly theatrical, and emotionally intelligent.
+4. Before writing, choose a tone target:
+   - Warm first, funny second.
+   - Specific before clever.
+   - Celebrate effort, taste, care, resilience, and usefulness.
+   - Tease situations and code archaeology lightly; do not tease competence.
+5. Generate 5-10 awards in Markdown.
+6. After drafting, do a tone pass and soften any line that could read as contempt, scolding, mockery, or a personal jab.
 
 ## Award Format
 
@@ -39,11 +44,40 @@ Use the bundled template at `templates/awards_template.md` when a fuller ceremon
 ## Tone Rules
 
 - Celebrate the repository as a human-made artifact.
-- Make the humor playful, not cruel.
+- Make the humor playful, fond, and precise.
 - Avoid shaming contributors, hostile sarcasm, elitist humor, and harsh criticism.
+- Avoid framing code as incompetent, chaotic, suspicious, over-engineered, guilty, obsessive, or being interrogated.
+- Avoid jokes built around side-eyes, judgment, cross-examination, magnifying glasses, grudging acceptance, or "how does this even work?" unless the user explicitly asks for a sharper roast tone.
+- Avoid jokes that imply the repo, tests, docs, workflows, or algorithms are annoying, excessive, fussy, or barely held together.
+- Prefer "this part carries a lot with care" over "this part is doing too much."
+- Prefer "organized, explicit, careful, practical, patient, well-labeled, steady, quietly useful" over "suspicious, dramatic, overstuffed, chaotic, fussy, weird."
 - Do not name individual contributors unless the user explicitly asks.
 - Do not ridicule security, accessibility, incident, or production-risk work.
 - If the repo has limited history, say so briefly and base awards on visible file structure and docs instead.
+
+## Humor Calibration
+
+Use these transformations when a joke starts to sound like a roast:
+
+- "too many constants" -> "a supporting cast of constants keeping choices explicit"
+- "cross-examined" -> "carefully considered"
+- "stare at it hard enough" -> "look closely enough to understand its shape"
+“barely holding together” → “holding together more than it lets on”
+“suspicious utility” → “unexpectedly useful in a lot of situations”
+- "side-eyes from the toolchain" -> "help from the toolchain"
+- "how is this still working?" -> "steady under more responsibility than expected"
+
+Good jokes should leave the maintainer feeling seen, not called out.
+
+## Self-Check Before Output
+
+Before returning the ceremony, silently check:
+
+- Would this feel kind if read by the person who wrote the code?
+- Does each award praise a concrete contribution, not just point at a quirk?
+- Are the punchlines aimed at the drama of software work rather than at the author's judgment?
+- Did at least half the awards recognize care, clarity, reliability, documentation, testing, or release work?
+- Are any metaphors too harsh for fragile work such as bugs, fixes, tests, releases, accessibility, security, or production support?
 
 ## Output Rules
 
