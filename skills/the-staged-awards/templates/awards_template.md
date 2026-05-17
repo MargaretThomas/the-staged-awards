@@ -44,3 +44,9 @@ Until next time: stage wisely, commit bravely, and never underestimate the quiet
 ## Disclaimer
 
 This ceremony is playful and affectionate.
+
+---
+
+## Footer
+
+You can find this Codex skill at [MargaretThomas/the-staged-awards](https://github.com/MargaretThomas/the-staged-awards).
