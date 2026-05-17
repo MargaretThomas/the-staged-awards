@@ -9,26 +9,24 @@ Generate a playful, affectionate mini awards ceremony for the current software r
 
 ## Workflow
 
-1. Inspect the repository context before writing the ceremony:
+1. Read the support files before generating:
+   - `templates/awards_template.md` is the required output structure unless the user asks for a shorter format.
+   - `references/ceremony-patterns.md` provides award ideas, useful repo signals, and tone calibration.
+2. Inspect the repository context:
    - Identify the repository name and current branch.
    - Review recent git history and commit messages.
    - Review tracked files, top-level directories, docs, tests, scripts, helpers, and config files.
    - Look for repeated changes, high-churn areas, quiet stable files, unusually named helpers, careful tests, ambitious refactors, recurring fix patterns, documentation growth, and workflow support.
-2. Prefer lightweight shell inspection commands such as:
+3. Prefer lightweight shell inspection commands such as:
    - `git rev-parse --show-toplevel`
    - `git branch --show-current`
    - `git log --oneline --decorate -30`
    - `git log --name-only --pretty=format: -- .`
    - `git ls-files`
    - `git status --short`
-3. Do not expose raw analysis notes unless the user asks. Use the inspection only to make the awards specific and grounded.
-4. Before writing, choose a tone target:
-   - Warm first, funny second.
-   - Specific before clever.
-   - Celebrate effort, taste, care, resilience, and usefulness.
-   - Tease situations and code archaeology lightly; do not tease competence.
-5. Generate 5-10 awards in Markdown.
-6. After drafting, do a tone pass and soften any line that could read as contempt, scolding, mockery, or a personal jab.
+4. Generate 4-6 awards in Markdown using the template fields and sections.
+5. Keep raw inspection notes out of the ceremony unless the user asks for them.
+6. Do a tone pass and soften any line that could read as contempt, scolding, mockery, or a personal jab.
 
 ## Award Format
 
@@ -39,18 +37,16 @@ Each award should include:
 - Short explanation grounded in the repository
 - Brief presenter-style commentary
 
-Use the bundled template at `templates/awards_template.md` when a fuller ceremony structure would help. Read `references/ceremony-patterns.md` for extra award ideas and tone constraints when needed.
-
 ## Tone Rules
 
-- Celebrate the repository as a human-made artifact.
-- Make the humor playful, fond, and precise.
+- Warm first, funny second.
+- Specific before clever.
+- Celebrate effort, taste, care, resilience, and usefulness.
+- Tease situations and code archaeology lightly; do not tease competence.
 - Avoid shaming contributors, hostile sarcasm, elitist humor, and harsh criticism.
 - Avoid framing code as incompetent, chaotic, suspicious, over-engineered, guilty, obsessive, or being interrogated.
 - Avoid jokes built around side-eyes, judgment, cross-examination, magnifying glasses, grudging acceptance, or "how does this even work?" unless the user explicitly asks for a sharper roast tone.
 - Avoid jokes that imply the repo, tests, docs, workflows, or algorithms are annoying, excessive, fussy, or barely held together.
-- Prefer "this part carries a lot with care" over "this part is doing too much."
-- Prefer "organized, explicit, careful, practical, patient, well-labeled, steady, quietly useful" over "suspicious, dramatic, overstuffed, chaotic, fussy, weird."
 - Do not name individual contributors unless the user explicitly asks.
 - Do not ridicule security, accessibility, incident, or production-risk work.
 - If the repo has limited history, say so briefly and base awards on visible file structure and docs instead.

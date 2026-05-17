@@ -1,6 +1,6 @@
 # Ceremony Patterns
 
-Use these as optional inspiration. Do not force every category.
+Use these patterns for award selection and tone calibration. Do not force every category.
 
 ## Award Ideas
 
@@ -34,6 +34,6 @@ Use these as optional inspiration. Do not force every category.
 
 ## Style
 
-The final result should feel like a tiny developer awards ceremony, affectionate code archaeology, and a celebration of repo personality.
+The result should feel like a small developer awards ceremony: affectionate, specific, and grounded in the repository.
 
-Favor warm specificity over roast phrasing. A good award says "this part did a lot of useful work" rather than "this part looks excessive." Use theatrical language for the ceremony itself, not as criticism of the code.
+Favor warm specificity over roast phrasing. Use theatrical language for the ceremony, not as criticism of the code.
