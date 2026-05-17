@@ -27,7 +27,7 @@ Tonight, we celebrate the fingerprints inside this repository: fixes, refactors,
 
 ## Awards
 
-{{awards}}
+{{awards_with_unlabeled_presenter_sentences}}
 
 ---
 

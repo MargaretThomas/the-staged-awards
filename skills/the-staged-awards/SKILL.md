@@ -35,7 +35,7 @@ Each award should include:
 - Award title
 - Winner, such as a file, directory, commit message, script, test, docs page, config file, or recurring pattern
 - Short explanation grounded in the repository
-- Brief presenter-style commentary
+- One brief presenter-style sentence as normal prose, without a label such as `Presenter commentary:`
 
 ## Tone Rules
 

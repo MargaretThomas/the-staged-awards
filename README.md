@@ -74,21 +74,56 @@ The goal is to celebrate the strange humanity inside software projects.
 ## Example Output
 
 ```md
-# The Staged Awards
+# The Staged Awards: example-repo
 
-## 🏆 Quiet MVP Award
-`src/utils/dateHelpers.ts`
+_A tiny awards ceremony for this repository._
 
-Never complained.
-Never asked for attention.
-Still carrying half the application on its back.
+Generated on: 2026-05-17  
+Repository: `example-repo`  
+Branch: `main`
 
 ---
 
-## 🏆 Most Chaotic Commit Message
-"final final actual fix 2"
+## Opening Remarks
 
-A timeless classic.
+Welcome to **The Staged Awards**, where commits become lore, files get their flowers, and quiet utilities receive the recognition they earned.
+
+Tonight, we celebrate the fingerprints inside this repository: fixes, refactors, careful naming, quiet helpers, steady tests, and practical workflow support.
+
+---
+
+## Ceremony Summary
+
+- Total commits reviewed: `24`
+- Files considered: `68`
+- Time period: `2026-04-20` to `2026-05-17`
+- Award count: `2`
+
+---
+
+## Awards
+
+### Quiet MVP File
+
+**Winner:** `src/utils/date_helpers.ts`
+
+This helper keeps date parsing, formatting, and timezone edges in one dependable place, making the rest of the app feel calmer than dates usually allow.
+
+It never asks for the spotlight, but half the application checks its watch by this file.
+
+### Most Patient Test
+
+**Winner:** `tests/import_flow.test.ts`
+
+This test walks through the import flow with steady attention: setup, validation, duplicate handling, and the final confirmation that the user gets the result they expected.
+
+It has the calm energy of someone checking every door before turning off the lights.
+
+---
+
+## Closing Remarks
+
+And that concludes **The Staged Awards**.
 ```
 
 ---
