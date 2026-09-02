@@ -24,9 +24,13 @@ Generate a playful, affectionate short-form awards ceremony for the current soft
    - `git log --name-only --pretty=format: -- .`
    - `git ls-files`
    - `git status --short`
-4. Generate 4-6 awards in Markdown using the template fields and sections.
-5. Keep raw inspection notes out of the ceremony unless the user asks for them.
-6. Do a tone pass and soften any line that could read as contempt, scolding, mockery, or a personal jab.
+4. Generate fresh opening and closing remarks for this run:
+   - Ground both sections in the repository's actual character, themes, history, or award choices rather than reusing stock ceremony prose.
+   - Keep them warm, concise, and distinct from each other. The opening should welcome the repository to the ceremony; the closing should reflect on what the awards recognized and give it a fitting send-off.
+   - Use time-neutral language. Do not say "tonight," "this morning," "today," or otherwise assume when the skill is being run unless the user explicitly asks for time-specific wording.
+5. Generate 4-6 awards in Markdown using the template fields and sections.
+6. Keep raw inspection notes out of the ceremony unless the user asks for them.
+7. Do a tone pass and soften any line that could read as contempt, scolding, mockery, or a personal jab.
 
 ## Award Format
 
@@ -82,3 +86,4 @@ Before returning the ceremony, silently check:
 - Do not wrap the ceremony in a code fence.
 - Do not include implementation commentary.
 - Prefer specific observations over generic software jokes.
+- Replace every template placeholder, including `{{opening_remarks}}` and `{{closing_remarks}}`; do not copy remarks from a previous ceremony.
