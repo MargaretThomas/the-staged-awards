@@ -3,7 +3,7 @@
 Lightweight awards ceremonies for software repositories.
 Part morale boost, part code archaeology, part developer theatre.
 
-The Staged Awards analyzes a repository’s structure, commit history, naming patterns, documentation, and development quirks to generate a playful short-form awards ceremony in Markdown.
+The Staged Awards analyzes a repository’s structure, commit history, naming patterns, documentation, and development quirks to generate a playful short-form awards ceremony in Markdown or LinkedIn-friendly plain text.
 
 Because every repo deserves at least one dramatic standing ovation.
 
@@ -32,6 +32,12 @@ Restart Codex, then invoke the skill from any repository:
 Use $the-staged-awards to generate an awards ceremony for this repository.
 ```
 
+For a copy-and-paste LinkedIn post, ask for the plain-text version:
+
+```text
+Use $the-staged-awards to generate a LinkedIn-friendly plain-text awards ceremony for this repository.
+```
+
 The skill should be installed at:
 
 ```text
@@ -49,6 +55,7 @@ This repository also includes a Codex plugin wrapper with one bundled skill:
 skills/the-staged-awards/SKILL.md
 skills/the-staged-awards/references/ceremony-patterns.md
 skills/the-staged-awards/templates/awards_template.md
+skills/the-staged-awards/templates/linkedin_awards_template.txt
 ```
 
 The plugin manifest points Codex at `./skills/`. Local plugin discovery support can vary by Codex environment, so the skill install steps above are the recommended path for local/team use today.
@@ -72,6 +79,8 @@ The goal is to celebrate the strange humanity inside software projects.
 ---
 
 ## Example Output
+
+The default output is Markdown. A complete plain-text example is also available in [`examples/sample-awards-linkedin.txt`](examples/sample-awards-linkedin.txt).
 
 ```md
 # The Staged Awards: example-repo

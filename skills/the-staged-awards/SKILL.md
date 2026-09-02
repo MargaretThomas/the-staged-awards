@@ -10,7 +10,8 @@ Generate a playful, affectionate short-form awards ceremony for the current soft
 ## Workflow
 
 1. Read the support files before generating:
-   - `templates/awards_template.md` is the required output structure unless the user asks for a shorter format.
+   - `templates/awards_template.md` is the required default output structure.
+   - `templates/linkedin_awards_template.txt` is the required structure when the user asks for LinkedIn, plain text, or an emoji-led version.
    - `references/ceremony-patterns.md` provides award ideas, useful repo signals, and tone calibration.
 2. Inspect the repository context:
    - Identify the repository name and current branch.
@@ -28,7 +29,7 @@ Generate a playful, affectionate short-form awards ceremony for the current soft
    - Ground both sections in the repository's actual character, themes, history, or award choices rather than reusing stock ceremony prose.
    - Keep them warm, concise, and distinct from each other. The opening should welcome the repository to the ceremony; the closing should reflect on what the awards recognized and give it a fitting send-off.
    - Use time-neutral language. Do not say "tonight," "this morning," "today," or otherwise assume when the skill is being run unless the user explicitly asks for time-specific wording.
-5. Generate 4-6 awards in Markdown using the template fields and sections.
+5. Generate 4-6 awards using the selected template. For LinkedIn mode, prefer 4 concise awards so the ceremony remains easy to post and read.
 6. Keep raw inspection notes out of the ceremony unless the user asks for them.
 7. Do a tone pass and soften any line that could read as contempt, scolding, mockery, or a personal jab.
 
@@ -81,7 +82,12 @@ Before returning the ceremony, silently check:
 
 ## Output Rules
 
-- Output valid Markdown only.
+- Default to valid Markdown using `templates/awards_template.md`.
+- For LinkedIn, plain-text, or emoji-led output, use `templates/linkedin_awards_template.txt` and:
+  - Use emoji and blank lines for structure instead of Markdown headings, emphasis, inline code, links, rules, or list markers.
+  - Keep repository paths and commit messages as ordinary unwrapped text.
+  - Write the footer URL in full so LinkedIn can recognize it as a link.
+  - Aim to keep the complete post at or below 2,500 characters. Tighten the explanations before removing required sections.
 - Do not output JSON.
 - Do not wrap the ceremony in a code fence.
 - Do not include implementation commentary.

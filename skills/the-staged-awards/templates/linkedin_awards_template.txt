@@ -1,0 +1,31 @@
+🎭 THE STAGED AWARDS: {{repository_name}}
+
+A lightweight awards ceremony for this repository.
+
+📅 Generated: {{generated_date}}
+📦 Repository: {{repository_name}}
+🌿 Branch: {{branch_name}}
+
+🎤 OPENING REMARKS
+
+{{opening_remarks}}
+
+📊 CEREMONY SUMMARY
+
+🧾 Commits reviewed: {{commit_count}}
+📁 Files considered: {{file_count}}
+🗓️ Time period: {{date_range}}
+🏆 Awards presented: {{award_count}}
+
+🏆 THE AWARDS
+
+{{plain_text_awards_with_emoji_titles_and_unlabeled_presenter_sentences}}
+
+🎬 CLOSING REMARKS
+
+{{closing_remarks}}
+
+💛 This ceremony is playful and affectionate.
+
+🔗 Find The Staged Awards Codex skill at:
+https://github.com/MargaretThomas/the-staged-awards
