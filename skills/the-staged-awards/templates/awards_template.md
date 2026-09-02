@@ -10,9 +10,7 @@ Branch: `{{branch_name}}`
 
 ## Opening Remarks
 
-Welcome to **The Staged Awards**, where commits become lore, files get their flowers, and quiet utilities receive the recognition they earned.
-
-Tonight, we celebrate the fingerprints inside this repository: fixes, refactors, careful naming, quiet helpers, steady tests, and practical workflow support.
+{{opening_remarks}}
 
 ---
 
@@ -33,11 +31,7 @@ Tonight, we celebrate the fingerprints inside this repository: fixes, refactors,
 
 ## Closing Remarks
 
-And that concludes **The Staged Awards**.
-
-May your builds be green, your diffs be readable, your commits be intentional, and your steady files keep carrying their part with care.
-
-Until next time: stage wisely, commit bravely, and never underestimate the quiet file doing all the work.
+{{closing_remarks}}
 
 ---
 
