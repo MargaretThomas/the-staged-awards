@@ -1,4 +1,4 @@
-🎭 THE STAGED AWARDS: {{repository_name}}
+🎭 The Staged Awards: {{repository_name}}
 
 A lightweight awards ceremony for this repository.
 
@@ -6,22 +6,22 @@ A lightweight awards ceremony for this repository.
 📦 Repository: {{repository_name}}
 🌿 Branch: {{branch_name}}
 
-🎤 OPENING REMARKS
+🎤 Opening Remarks
 
 {{opening_remarks}}
 
-📊 CEREMONY SUMMARY
+📊 Ceremoy Summary
 
 🧾 Commits reviewed: {{commit_count}}
 📁 Files considered: {{file_count}}
 🗓️ Time period: {{date_range}}
 🏆 Awards presented: {{award_count}}
 
-🏆 THE AWARDS
+🏆 The Awards
 
 {{plain_text_awards_with_emoji_titles_and_unlabeled_presenter_sentences}}
 
-🎬 CLOSING REMARKS
+🎬 Closing Remarks
 
 {{closing_remarks}}
 
