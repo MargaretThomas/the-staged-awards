@@ -3,7 +3,9 @@
 A lightweight awards ceremony for this repository.
 
 📅 Generated: {{generated_date}}
+😃 Author: 
 📦 Repository: {{repository_name}}
+📁 Repository Link: 
 🌿 Branch: {{branch_name}}
 
 🎤 Opening Remarks
