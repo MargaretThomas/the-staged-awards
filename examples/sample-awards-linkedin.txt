@@ -12,9 +12,13 @@ Welcome to The Staged Awards, where example-repo's careful helpers and patient t
 
 📊 CEREMONY SUMMARY
 
-🧾 Commits reviewed: 24
-📁 Files considered: 68
-🗓️ Time period: 2026-04-20 to 2026-05-17
+📐 Repository size: small
+📁 Tracked files inventoried: 68
+📄 Eligible text analyzed: 61 files, 8,420 lines
+🔎 Inspection coverage: all eligible text files read
+🧾 Total commits in available history: 24
+🗓️ Available history: 2026-04-20 to 2026-05-17
+🧭 History scope: HEAD and all locally available refs
 🏆 Awards presented: 2
 
 🏆 THE AWARDS

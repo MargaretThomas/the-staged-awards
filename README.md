@@ -5,6 +5,8 @@ Part morale boost, part code archaeology, part developer theatre.
 
 The Staged Awards analyzes a repository’s structure, commit history, naming patterns, documentation, and development quirks to generate a playful short-form awards ceremony in Markdown or LinkedIn-friendly plain text.
 
+Its inspection depth adapts to the amount of eligible tracked text: small repositories are read in full, while medium and large repositories use increasingly selective but repository-wide component coverage. Every ceremony reports the tracked and eligible file totals, eligible line count, inspection coverage, total commits in locally available history, and the first and latest available commit dates.
+
 Because every repo deserves at least one dramatic standing ovation.
 
 ---
@@ -54,6 +56,7 @@ This repository also includes a Codex plugin wrapper with one bundled skill:
 .codex-plugin/plugin.json
 skills/the-staged-awards/SKILL.md
 skills/the-staged-awards/references/ceremony-patterns.md
+skills/the-staged-awards/scripts/repository_profile.py
 skills/the-staged-awards/templates/awards_template.md
 skills/the-staged-awards/templates/linkedin_awards_template.txt
 ```
@@ -63,6 +66,14 @@ The plugin manifest points Codex at `./skills/`. Local plugin discovery support 
 ---
 
 ## What It Does
+
+Before choosing awards, the skill profiles the repository:
+
+* **Small:** at most 100 eligible text files and 20,000 lines; read all eligible text.
+* **Medium:** at most 500 eligible text files and 100,000 lines; cover every primary component and deepen analysis around documentation, tests, workflows, and churn.
+* **Large:** above either medium threshold; map the full repository and use structured sampling across every primary component and the available history span.
+
+Dependencies, vendor trees, build and generated output, coverage files, lockfiles, minified files, source maps, binaries, symlinks, unreadable files, secret-like credentials, and all `.env` files do not contribute to the size category. Environment matching is case-insensitive and covers concrete files plus example, sample, and template variants. Git totals cover `HEAD` and all locally available refs. A shallow clone or unfetched remote history can therefore produce an incomplete total, which the ceremony must disclose.
 
 The Staged Awards can generate things like:
 
@@ -103,9 +114,13 @@ This ceremony celebrates the small, steady choices that keep the project moving:
 
 ## Ceremony Summary
 
-- Total commits reviewed: `24`
-- Files considered: `68`
-- Time period: `2026-04-20` to `2026-05-17`
+- Repository size: `small`
+- Tracked files inventoried: `68`
+- Eligible text analyzed: `61` files, `8,420` lines
+- Inspection coverage: all eligible text files read
+- Total commits in available history: `24`
+- Available history period: `2026-04-20` to `2026-05-17`
+- History scope: HEAD and all locally available refs
 - Award count: `2`
 
 ---

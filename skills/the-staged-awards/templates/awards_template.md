@@ -18,9 +18,13 @@ Branch: `{{branch_name}}`
 
 ## Ceremony Summary
 
-- Total commits reviewed: `{{commit_count}}`
-- Files considered: `{{file_count}}`
-- Time period: `{{date_range}}`
+- Repository size: `{{repository_size}}`
+- Tracked files inventoried: `{{tracked_file_count}}`
+- Eligible text analyzed: `{{eligible_file_count}}` files, `{{eligible_line_count}}` lines
+- Inspection coverage: {{inspection_coverage}}
+- Total commits in available history: `{{commit_count}}`
+- Available history period: `{{first_commit_date}}` to `{{latest_commit_date}}`
+- History scope: {{history_scope}}
 - Award count: `{{award_count}}`
 
 ---
