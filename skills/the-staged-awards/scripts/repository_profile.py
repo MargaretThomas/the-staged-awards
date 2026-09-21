@@ -5,11 +5,13 @@ from __future__ import annotations
 
 import argparse
 import os
+import re
 import subprocess
 import sys
 from collections import Counter
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlsplit, urlunsplit
 
 
 EXCLUDED_DIRECTORIES = {
@@ -159,6 +161,40 @@ def author_profile(root: Path, commit_count: int) -> str:
     return ", ".join(ranked_authors[:3])
 
 
+def repository_link(root: Path) -> str:
+    remote = git(root, "config", "--get", "remote.origin.url", check=False)
+    if remote.returncode != 0:
+        return "Repository link unavailable"
+
+    remote_url = os.fsdecode(remote.stdout).strip()
+    try:
+        parsed = urlsplit(remote_url)
+        hostname = parsed.hostname
+    except ValueError:
+        return "Repository link unavailable"
+    if parsed.scheme in {"http", "https", "ssh", "git"} and hostname:
+        scheme = parsed.scheme if parsed.scheme in {"http", "https"} else "https"
+        host = (
+            parsed.netloc.rsplit("@", 1)[-1]
+            if scheme in {"http", "https"}
+            else hostname
+        )
+        path = parsed.path
+    else:
+        scp_remote = re.fullmatch(r"[^@/:]+@([^@/:]+):(.+)", remote_url)
+        if not scp_remote:
+            return "Repository link unavailable"
+        scheme = "https"
+        host, path = scp_remote.groups()
+
+    path = path.rstrip("/")
+    if path.endswith(".git"):
+        path = path[:-4]
+    if not path or path == "/":
+        return "Repository link unavailable"
+    return urlunsplit((scheme, host, "/" + path.lstrip("/"), "", ""))
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Report Git history and eligible text size for a repository."
@@ -206,6 +242,7 @@ def main() -> int:
     is_shallow = os.fsdecode(shallow_result.stdout).strip() == "true"
 
     print(f"repository_root={root}")
+    print(f"repository_link={repository_link(root)}")
     print(f"branch={branch}")
     print(f"repository_size={classify_repository(eligible_file_count, eligible_line_count)}")
     print(f"tracked_file_count={len(tracked_paths)}")

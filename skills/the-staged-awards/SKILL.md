@@ -14,6 +14,7 @@ Generate a playful, affectionate short-form awards ceremony for the current soft
    - `templates/linkedin_awards_template.txt` is the required structure when the user asks for LinkedIn, plain text, or an emoji-led version.
    - `references/ceremony-patterns.md` provides award ideas, useful repo signals, and tone calibration.
 2. Resolve this skill's directory, then run `python3 scripts/repository_profile.py <repository-path>`. Use its measurements to classify the repository and populate the ceremony summary. The script measures every Git-tracked path, counts eligible text files and lines, and examines commits reachable from `HEAD` and all locally available refs.
+   Use its `repository_link` value for the template's Repository Link field. The value is a browser link derived from `remote.origin.url`; if there is no usable hosted remote, use `Repository link unavailable`. A configured remote does not confirm that the page is public or reachable.
 3. Inspect the complete tracked-file inventory, then apply the matching depth:
    - **Small:** at most 100 eligible text files and 20,000 eligible lines. Read every eligible text file.
    - **Medium:** at most 500 eligible text files and 100,000 eligible lines. Map every directory; read repository-level docs, tests, scripts, helpers, configuration, and workflows; inspect representative files from every primary component; and deepen coverage around high-churn and recently changed files.

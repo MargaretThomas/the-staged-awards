@@ -5,7 +5,7 @@ A lightweight awards ceremony for this repository.
 📅 Generated: {{generated_date}}
 😃 Author: {{author}}
 📦 Repository: {{repository_name}}
-📁 Repository Link: 
+📁 Repository Link: {{repository_link}}
 🌿 Branch: {{branch_name}}
 
 🎤 Opening Remarks
