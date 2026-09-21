@@ -7,6 +7,7 @@ import argparse
 import os
 import subprocess
 import sys
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
@@ -138,6 +139,26 @@ def history_profile(root: Path) -> tuple[int, str, str]:
     return len(commit_ids), dated_commits[0][1], dated_commits[-1][1]
 
 
+def author_profile(root: Path, commit_count: int) -> str:
+    if commit_count == 0:
+        return "Repository contributors"
+
+    author_output = git(
+        root, "log", *history_revisions(root), "--format=%an%x00"
+    ).stdout
+    author_counts = Counter(
+        os.fsdecode(name).strip()
+        for name in author_output.split(b"\0")
+        if name.strip()
+    )
+    if not author_counts:
+        return "Repository contributors"
+    ranked_authors = sorted(
+        author_counts, key=lambda name: (-author_counts[name], name.casefold(), name)
+    )
+    return ", ".join(ranked_authors[:3])
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Report Git history and eligible text size for a repository."
@@ -192,6 +213,7 @@ def main() -> int:
     print(f"eligible_line_count={eligible_line_count}")
     print(f"excluded_file_count={excluded_file_count}")
     print(f"commit_count={commit_count}")
+    print(f"author={author_profile(root, commit_count)}")
     print(f"first_commit_date={first_commit_date}")
     print(f"latest_commit_date={latest_commit_date}")
     history_scope = "HEAD and all locally available refs"
