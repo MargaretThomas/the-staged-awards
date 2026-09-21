@@ -26,7 +26,7 @@ Generate a playful, affectionate short-form awards ceremony for the current soft
    - Use name and churn history across all locally available refs to find repeated changes, quiet stable files, ambitious refactors, recurring fixes, documentation growth, and workflow support.
    - Treat `commit_count`, `first_commit_date`, and `latest_commit_date` as totals for locally available history. If `shallow_repository=yes`, explicitly label the history as incomplete. Local analysis cannot count unfetched or unavailable remote commits.
    - For a repository with no commits, use `0` and `N/A` for both dates, then base awards on the visible file structure.
-   - For LinkedIn output, fill `Author` from the profiler's `author` value. It counts Git author names across the same available commits: use the name alone when all commits have one distinct author name, list the three most frequent names when there are multiple (commit count descending, then name alphabetically for ties), and use `Repository contributors` when there are no commits. Never include author email addresses.
+   - For both output formats, fill `Author` from the profiler's `author` value. It counts Git author names across the same available commits: use the name alone when all commits have one distinct author name, list the three most frequent names when there are multiple (commit count descending, then name alphabetically for ties), and use `Repository contributors` when there are no commits. Never include author email addresses.
 5. Generate fresh opening and closing remarks for this run:
    - Ground both sections in the repository's actual character, themes, history, or award choices rather than reusing stock ceremony prose.
    - Keep them warm, concise, and distinct from each other. The opening should welcome the repository to the ceremony; the closing should reflect on what the awards recognized and give it a fitting send-off.
@@ -54,7 +54,7 @@ Each award should include:
 - Avoid framing code as incompetent, chaotic, suspicious, over-engineered, guilty, obsessive, or being interrogated.
 - Avoid jokes built around side-eyes, judgment, cross-examination, magnifying glasses, grudging acceptance, or "how does this even work?" unless the user explicitly asks for a sharper roast tone.
 - Avoid jokes that imply the repo, tests, docs, workflows, or algorithms are annoying, excessive, fussy, or barely held together.
-- Do not name individual contributors in award copy unless the user explicitly asks. The LinkedIn `Author` field follows the Git author rule above.
+- Do not name individual contributors in award copy unless the user explicitly asks. The `Author` field follows the Git author rule above.
 - Do not ridicule security, accessibility, incident, or production-risk work.
 - If the repo has limited history, say so briefly and base awards on visible file structure and docs instead.
 
@@ -86,7 +86,6 @@ Before returning the ceremony, silently check:
 
 - Default to valid Markdown using `templates/awards_template.md`.
 - For LinkedIn, plain-text, or emoji-led output, use `templates/linkedin_awards_template.txt` and:
-  - Replace `{{author}}` with the profiler's `author` value.
   - Use emoji and blank lines for structure instead of Markdown headings, emphasis, inline code, links, rules, or list markers.
   - Keep repository paths and commit messages as ordinary unwrapped text.
   - Write the footer URL in full so LinkedIn can recognize it as a link.

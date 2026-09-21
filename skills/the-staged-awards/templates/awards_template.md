@@ -3,7 +3,8 @@
 _A lightweight awards ceremony for this repository._
 
 Generated on: {{generated_date}}  
-Author: 
+Author: {{author}}
+
 Repository: `{{repository_name}}`  
 Repository Link: {{repository_link}}
 Branch: `{{branch_name}}`
