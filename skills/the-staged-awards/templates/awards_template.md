@@ -2,6 +2,10 @@
 
 _A lightweight awards ceremony for this repository._
 
+![{{image_alt_text}}]({{image_path}})
+
+_Companion artwork: {{image_style}}._
+
 Generated on: {{generated_date}}  
 Author: {{author}}
 

@@ -3,7 +3,7 @@
 Lightweight awards ceremonies for software repositories.
 Part morale boost, part code archaeology, part developer theatre.
 
-The Staged Awards analyzes a repository’s structure, commit history, naming patterns, documentation, and development quirks to generate a playful short-form awards ceremony in Markdown or LinkedIn-friendly plain text.
+The Staged Awards analyzes a repository’s structure, commit history, naming patterns, documentation, and development quirks to generate a playful short-form awards ceremony in Markdown or LinkedIn-friendly plain text. Each ceremony also receives repository-specific 4:3 companion artwork, alt text, and an exact repository-name title treatment.
 
 Its inspection depth adapts to the amount of eligible tracked text: small repositories are read in full, while medium and large repositories use increasingly selective but repository-wide component coverage. Every ceremony reports the tracked and eligible file totals, eligible line count, inspection coverage, total commits in locally available history, and the first and latest available commit dates.
 
@@ -56,7 +56,10 @@ This repository also includes a Codex plugin wrapper with one bundled skill:
 .codex-plugin/plugin.json
 skills/the-staged-awards/SKILL.md
 skills/the-staged-awards/references/ceremony-patterns.md
+skills/the-staged-awards/references/image-companion.md
+skills/the-staged-awards/scripts/compose_awards_image.py
 skills/the-staged-awards/scripts/repository_profile.py
+skills/the-staged-awards/scripts/select_image_style.py
 skills/the-staged-awards/templates/awards_template.md
 skills/the-staged-awards/templates/linkedin_awards_template.txt
 ```
@@ -86,6 +89,12 @@ The Staged Awards can generate things like:
 * 🏆 The Courage Under Production Pressure Award
 
 The goal is to celebrate the strange humanity inside software projects.
+
+### Companion artwork
+
+Every ceremony randomly selects one of five visual directions: theatrical paper-cut diorama, retro pixel art, isometric 3D miniature, vintage screen print, or technical cyanotype. The artwork uses motifs verified during repository inspection rather than generic code imagery. A finishing script crops the selected artwork to 1200 × 900 and overlays the exact repository name plus The Staged Awards series mark; this step requires `ffmpeg`.
+
+Markdown output embeds the saved image. LinkedIn output keeps the post copy clean and provides the upload-ready PNG and alt text as a separate handoff. Ask for “no companion image” to opt out.
 
 ---
 
