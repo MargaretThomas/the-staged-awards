@@ -28,9 +28,11 @@ Generate a playful, affectionate short-form awards ceremony for the current soft
    - Treat `commit_count`, `first_commit_date`, and `latest_commit_date` as totals for locally available history. If `shallow_repository=yes`, explicitly label the history as incomplete. Local analysis cannot count unfetched or unavailable remote commits.
    - For a repository with no commits, use `0` and `N/A` for both dates, then base awards on the visible file structure.
    - For both output formats, fill `Author` from the profiler's `author` value. It counts Git author names across the same available commits: use the name alone when all commits have one distinct author name, list the three most frequent names when there are multiple (commit count descending, then name alphabetically for ties), and use `Repository contributors` when there are no commits. Never include author email addresses.
-5. Generate fresh opening and closing remarks for this run:
-   - Ground both sections in the repository's actual character, themes, history, or award choices rather than reusing stock ceremony prose.
-   - Keep them warm, concise, and distinct from each other. The opening should welcome the repository to the ceremony; the closing should reflect on what the awards recognized and give it a fitting send-off.
+5. Generate a fresh intro line plus fresh opening and closing remarks for this run:
+   - Replace `{{intro_line}}` with one short, inviting curtain-raiser in the voice described by `references/ceremony-patterns.md`. Keep it broadly about repositories, commits, code history, or overlooked work; save repository-specific files, features, and findings for the opening remarks and awards.
+   - Vary the intro's angle and sentence shape between runs. Use the examples as tone calibration, not as a fixed list to rotate or copy. Do not fall back to "A lightweight awards ceremony for this repository" or another description of the skill.
+   - Ground the opening and closing in the repository rather than reusing stock ceremony prose.
+   - Keep all three sections warm, concise, and distinct. The intro should set the universal ceremony mood; the opening should welcome this particular repository; the closing should reflect on what the awards recognized and give it a fitting send-off.
    - Use time-neutral language. Do not say "tonight," "this morning," "today," or otherwise assume when the skill is being run unless the user explicitly asks for time-specific wording.
 6. Generate 4-6 awards using the selected template. For LinkedIn mode, prefer 4 concise awards so the ceremony remains easy to post and read.
 7. Follow `references/image-companion.md` to select one of five art styles at random, generate one repository-specific image, finish it as a 1200 x 900 PNG with an exact repository-name overlay, inspect it, save it in the target repository, and write alt text. Generate the image for both Markdown and LinkedIn ceremonies unless the user explicitly opts out.
@@ -99,5 +101,5 @@ Before returning the ceremony, silently check:
 - Do not include implementation commentary.
 - Prefer specific observations over generic software jokes.
 - In the ceremony summary, always report repository size, tracked and eligible file totals, eligible line total, inspection coverage, total available commits, and the first and latest available commit dates.
-- Replace every template placeholder, including `{{opening_remarks}}` and `{{closing_remarks}}`; do not copy remarks from a previous ceremony.
+- Replace every template placeholder, including `{{intro_line}}`, `{{opening_remarks}}`, and `{{closing_remarks}}`; do not copy these lines from a previous ceremony.
 - Return the selected image style, final saved PNG path, and alt text with every ceremony. If image generation or finishing is blocked, state the precise limitation instead of presenting an incomplete asset as finished.

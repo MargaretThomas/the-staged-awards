@@ -1,6 +1,6 @@
 🎭 The Staged Awards: {{repository_name}}
 
-A lightweight awards ceremony for this repository.
+{{intro_line}}
 
 📅 Generated: {{generated_date}}
 😃 Author: {{author}}

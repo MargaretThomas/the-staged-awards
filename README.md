@@ -105,7 +105,7 @@ The default output is Markdown. A complete plain-text example is also available 
 ```md
 # The Staged Awards: example-repo
 
-_A lightweight awards ceremony for this repository._
+_Some commits deserve more than a green checkmark._
 
 Generated on: 2026-05-17  
 Repository: `example-repo`  

@@ -2,6 +2,27 @@
 
 Use these patterns for award selection and tone calibration. Do not force every category.
 
+## Intro-Line Voice
+
+Write a new one- or two-sentence curtain-raiser for each ceremony. Keep it broad enough to introduce any repository; repository-specific observations belong in the opening remarks. Vary the wording and rhythm instead of rotating these examples as stock copy.
+
+**Theatrical**
+
+- The curtain rises on another repository with stories to tell.
+- The commits have spoken. The nominations are in.
+
+**Developer humour**
+
+- Some commits deserve more than a green checkmark.
+- The changelog has receipts. The ceremony has trophies.
+
+**Warm recognition**
+
+- Every repository has a story hiding in its history.
+- A little applause for the work that usually goes unnoticed.
+
+Stay within these three tonal families, but generate fresh phrasing when possible. Avoid named files, features, implementation details, unsupported claims, and time-specific scene setting unless the user requests it.
+
 ## Award Ideas
 
 - Quiet MVP File
